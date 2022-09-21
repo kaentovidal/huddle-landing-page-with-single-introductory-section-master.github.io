@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+:root {
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+    --White: hsl(100, 99%, 99%)
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url('images/bg-desktop.svg') var( --Violet );
+    height: 100vh;
+    padding: 1rem 1rem 0 1rem;
+    display: flex;
+    flex-direction: column;
+}
+main .logo {
+    max-height: 2rem;
+}
+.main {
+    padding: 2rem 0;
+    display: flex;
+}
+.main img {
+    max-width: 50%;
+    object-fit: contain;
+}
+.info {
+    padding: 1rem;
+}
+h1 {
+    color: var( --White);
+    font-family: 'Poppins', sans-serif;
+}
+p {
+    color: var( --White);
+    padding: 1rem 0;
+    font-family: 'Open Sans', sans-serif;
+}
+button {
+    padding: .5rem 1.5rem;
+    border-radius: 1rem;
+    border: none;
+    color: var( --Violet);
+}
+button:hover {
+    background-color: var( --Soft-Magenta);
+    color: var( --White);
+    box-shadow: 5px  0 9px black;
+    cursor: pointer;
+    
+}
+.social {
+    min-width: 100%;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 1rem;
+}
+.social svg {
+    width: 30px;
+    height: 30px;
+    fill: var( --White);
+    border: 1px solid var( --White);
+    border-radius: 50%;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    cursor: pointer;
+}
+.social svg:hover {
+    border: 1px solid var( --Soft-Magenta);
+    fill: var( --Soft-Magenta);
+}
+
+
+@media ( max-width: 375px ) and (orientation: portrait) {
+    body {
+        background: url('images/bg-mobile.svg') no-repeat, var(--Violet);
+    }
+    main {
+        display: flex;
+        /* background-color: aqua; */
+        flex-direction: column;
+    }
+    .logo{
+        display: inline;
+        max-width: 9rem;
+    }
+    .main img {
+        display: block;
+        min-width: 100%;
+    }
+    main .main {
+        display: block;
+    }
+    h1 {
+        font-weight: 600;
+        font-size: 24px;
+    }
+    h1, p {
+        text-align: center;
+    }
+    button {
+        display: block;
+        margin: auto;
+        width: 80%;
+    }
+    .social {
+        justify-content: center;
+    }
+
+}
+
+
+
+
